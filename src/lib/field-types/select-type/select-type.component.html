@@ -1,0 +1,21 @@
+<select
+  class="deco-select"
+  [formControl]="control"
+  [class.gray]="!(valueChange | async)"
+  [class.black]="valueChange | async"
+>
+  <option
+    [ngValue]="null"
+    [disabled]="true"
+    hidden
+    selectPlaceholder
+  >
+    <!-- {{ field.placeholder | placeholder }} -->
+  </option>
+  <option
+    *ngFor="let option of (config.options$ | async)"
+    [ngValue]="option.id"
+  >
+    {{ option.name }}
+  </option>
+</select>

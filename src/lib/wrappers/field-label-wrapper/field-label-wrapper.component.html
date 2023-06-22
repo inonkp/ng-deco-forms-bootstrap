@@ -1,0 +1,13 @@
+<div class="deco-field-label">
+  <div class="deco-field-label__label">
+    <label
+      *ngIf="config.label"
+      class="deco-field-label__text"
+    >{{ config.label }}</label>
+    <deco-tooltips [tooltip]="config.tooltip" [warning]="config.warning$"></deco-tooltips>
+  </div>
+
+  <div class="deco-field-label__field" decoWarning>
+    <ng-content></ng-content>
+  </div>
+</div>

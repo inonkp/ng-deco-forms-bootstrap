@@ -1,0 +1,11 @@
+.gray {
+    color: gray;
+}
+
+.black {
+    color: black;
+}
+
+option:not(:first-of-type) {
+    color: black;
+  }

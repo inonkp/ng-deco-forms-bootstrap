@@ -1,0 +1,16 @@
+{
+  "name": "ng-deco-forms-bootstrap",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0",
+    "@angular/forms": ">=14.0.0",
+    "@ng-bootstrap/ng-bootstrap": ">=13.0.0",
+    "ngx-autosize": ">=2.0.2",
+    "ng-deco-forms": ">=0.3.3"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
