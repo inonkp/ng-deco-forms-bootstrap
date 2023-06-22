@@ -176,8 +176,8 @@ Adds a place holder for select fields.
 
 ## Demo
 
-[Demo](https://6493f1028c6e0a2cd788a01f--astonishing-caramel-111bae.netlify.app/)
-[Demo Repo](https://github.com/inonkp/ng-deco-forms-bootstrap-demo.git)
+You can find the [Demo Here](https://6493f1028c6e0a2cd788a01f--astonishing-caramel-111bae.netlify.app/)
+and the [Demo Repo](https://github.com/inonkp/ng-deco-forms-bootstrap-demo.git).
 
 
 
