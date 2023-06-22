@@ -2,6 +2,36 @@
 
 An implementation of Angular Decorated Forms (ng-deco-forms) with Bootstrap.
 
+# Table of contents
+
+- [Angular Decorated Forms Bootstrap](#angular-decorated-forms-bootstrap)
+  - [Fields](#fields)
+    - [Text](#text)
+    - [Number](#number)
+    - [Hidden](#hidden)
+    - [Textarea](#textarea)
+    - [Checkbox](#checkbox)
+    - [Select](#select)
+  - [Wrappers](#wrappers)
+    - [Label](#label)
+    - [CheckLabel](#checklabel)
+    - [Hint](#hint)
+    - [Title](#title)
+    - [Hide](#hide)
+  - [Validators](#validators)
+    - [Required](#required)
+  - [Classes](#classes)
+    - [Row](#row)
+    - [Half, Third, Quarter, TwoThirds](#half-third-quarter-twothirds)
+  - [Submission](#submission)
+    - [Submit](#submit)
+    - [Action](#action)
+    - [BtnClass](#btnclass)
+  - [Directives](#directives)
+    - [for and id](#for-and-id)
+    - [selectPlaceholder](#selectplaceholder)
+  - [Demo](#demo)
+
 ## Fields
 
 ### Text 
@@ -145,5 +175,9 @@ Will add for and id fields for labels and inputs.
 Adds a place holder for select fields.
 
 ## Demo
+
+[Demo](https://6493f1028c6e0a2cd788a01f--astonishing-caramel-111bae.netlify.app/)
+[Demo Repo](https://github.com/inonkp/ng-deco-forms-bootstrap-demo.git)
+
 
 
