@@ -66,7 +66,8 @@ import { NestedDropdownComponent } from './field-types/nested-dropdown/nested-dr
     PlaceholderDirective,
     SelectPlaceholderDirective,
     ErrorPipe,
-    DecoFormsLibModule
+    DecoFormsLibModule,
+    NgbModule
   ]
 })
 export class DecoFormsBootstrapModule { }

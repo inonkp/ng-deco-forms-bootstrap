@@ -1,6 +1,17 @@
 {
   "name": "ng-deco-forms-bootstrap",
-  "version": "0.0.1",
+  "version": "0.0.4",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "forms",
+    "bootstrap"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inonkp/ng-deco-forms-bootstrap"
+  },
+  "author": "Inon Kaplan <inonkp@gmail.com>",
   "peerDependencies": {
     "@angular/common": ">=14.0.0",
     "@angular/core": ">=14.0.0",
