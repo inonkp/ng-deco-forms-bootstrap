@@ -58,6 +58,7 @@ import { NestedDropdownComponent } from './field-types/nested-dropdown/nested-dr
     TextTypeComponent,
     CheckboxTypeComponent,
     NumberTypeComponent,
+    NestedDropdownComponent,
     HiddenComponent,
     FieldLabelWrapperComponent,
     CheckboxLabelWrapperComponent,

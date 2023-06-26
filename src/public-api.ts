@@ -3,6 +3,7 @@
  */
 
 export * from './lib/deco-forms-bootstrap.module';
+export * from './lib/field-types/nested-dropdown/nested-dropdown.component';
 export * from './lib/field-types/checkbox-type/checkbox-type.component';
 export * from './lib/field-types/select-type/select-type.component';
 export * from './lib/field-types/text-type/text-type.component';

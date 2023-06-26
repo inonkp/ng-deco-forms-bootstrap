@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { DataParentEntity, FIELD_CONFIG_TOKEN, FIELD_FORM_CONTROL_TOKEN } from 'ng-deco-forms';
 import { Observable, of } from 'rxjs';
 
-type NestedSelectConfig = {
+export type NestedSelectConfig = {
   options$: Observable<DataParentEntity[]>,
   level: number
 }
@@ -13,15 +13,16 @@ type NestedSelectConfig = {
   templateUrl: './nested-dropdown.component.html',
   styleUrls: ['./nested-dropdown.component.css'],
   providers: [
-    // {
-    //   provide: FIELD_CONFIG_TOKEN,
-    //   useFactory: () => {
-    //     const config = inject(FIELD_CONFIG_TOKEN, {skipSelf: true, optional: true});
-    //     return {
-    //       level: config ? config.level + 1 : 0
-    //     }
-    //   }
-    // }
+    {
+      provide: FIELD_CONFIG_TOKEN,
+      useFactory: () => {
+        const config = inject(FIELD_CONFIG_TOKEN, {skipSelf: true, optional: true});
+        return {
+          ...config,
+          level: config.level >= 0 ? config.level + 1 : 0
+        }
+      }
+    }
   ]
 })
 export class NestedDropdownComponent implements OnInit {
