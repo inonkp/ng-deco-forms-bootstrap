@@ -6,7 +6,7 @@
     [ngClass]="'icon warning bi bi-exclamation-triangle-fill me-1'"
 ></i>
 <i
-    *ngIf="(statusChanges | async)== 'INVALID'"
+    *ngIf="(statusChanges | async)== 'INVALID' && control.dirty"
     [ngbTooltip]="errors | error"
     [tooltipClass]="'danger-tooltip'"
     placement="top"
