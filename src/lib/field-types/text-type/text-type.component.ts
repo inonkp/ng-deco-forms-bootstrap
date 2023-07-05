@@ -6,7 +6,6 @@ import { FIELD_FORM_CONTROL_TOKEN } from 'ng-deco-forms';
 @Component({ 
   selector: 'deco-text-type',
   templateUrl: './text-type.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TextTypeComponent {
 

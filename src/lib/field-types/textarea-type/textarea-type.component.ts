@@ -9,7 +9,7 @@ export type TextAreaConfig = {
 @Component({ 
   selector: 'deco-textarea-type',
   templateUrl: './textarea-type.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class TextAreaTypeComponent {
  

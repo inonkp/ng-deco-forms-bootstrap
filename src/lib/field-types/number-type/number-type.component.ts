@@ -10,7 +10,7 @@ export type NumberFieldConfig = {
 @Component({ 
   selector: 'deco-number-type',
   templateUrl: './number-type.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class NumberTypeComponent {
 

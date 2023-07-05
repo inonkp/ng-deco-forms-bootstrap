@@ -5,7 +5,7 @@ import { FIELD_FORM_CONTROL_TOKEN } from 'ng-deco-forms';
 @Component({ 
   selector: 'deco-checkbox-type',
   templateUrl: './checkbox-type.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class CheckboxTypeComponent {
 

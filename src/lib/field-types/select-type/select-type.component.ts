@@ -13,7 +13,7 @@ export type SelectConfig = {
   selector: 'deco-select-type',
   templateUrl: './select-type.component.html',
   styleUrls: ['./select-type.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class SelectTypeComponent {
   
