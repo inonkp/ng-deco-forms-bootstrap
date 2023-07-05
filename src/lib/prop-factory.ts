@@ -1,6 +1,6 @@
 import { ValidatorFn, Validators } from "@angular/forms";
 import { inject } from '@angular/core';
-import { chain, Class, Prop, Wrap, addValidator, DataEntity, Validator, Provide, PropFactory, FIELD_CONFIG_TOKEN, targetConfig, FIELD_CHANGE_TRACKING_TOKEN, FORM_SUBMIT_TOKEN } from "ng-deco-forms";
+import { chain, Class, Prop, Wrap, addValidator, DataEntity, Validator, Provide, PropFactory, FIELD_CONFIG_TOKEN, targetConfig, FIELD_CHANGE_TRACKING_TOKEN, FORM_SUBMIT_TOKEN, DataParentEntity } from "ng-deco-forms";
 import { Observable, of } from "rxjs";
 import { FieldLabelWrapperComponent, LabelConfig } from "./wrappers/field-label-wrapper/field-label-wrapper.component";
 import { NumberTypeComponent } from "./field-types/number-type/number-type.component";
@@ -11,7 +11,7 @@ import { CheckboxLabelWrapperComponent } from "./wrappers/checkbox-label-wrapper
 import { HideFieldWrapperComponent } from "./wrappers/hide-field-wrapper/hide-field-wrapper.component";
 import { SubmitComponent } from "./submit/submit.component";
 import { LABEL_TOKEN } from './directives/select-placeholder.directive';
-
+import { NestedDropdownComponent } from "./field-types/nested-dropdown/nested-dropdown.component";
 export const Max = (max: number) => chain([Prop(NumberTypeComponent, 'max', max), addValidator(Validators.max(max))])
 export const Min = (min: number) => chain([Prop(NumberTypeComponent, 'min', min), addValidator(Validators.min(min + 0.1))])
 export const Step = (step: number) => Prop(NumberTypeComponent, 'step', step);
@@ -43,3 +43,5 @@ export const Row = Class('deco-group-row');
 export const Action = (action: string) => Prop(SubmitComponent, 'label', action);
 export const BtnClass = (cls: string) => Prop(SubmitComponent, 'btnClass', cls);
 export const Submit = (func: () => (() => void)) => Provide({provide: FORM_SUBMIT_TOKEN, useFactory: func});
+
+export const DropOptions = (fact: () => Observable<DataParentEntity[]>) => PropFactory(NestedDropdownComponent, 'options$', fact);
