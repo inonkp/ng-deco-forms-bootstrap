@@ -29,10 +29,10 @@ export const CheckLabel = (label: string) => chain([Wrap(CheckboxLabelWrapperCom
 export const Hint = (hint: string) => chain([Wrap(FieldHintWrapperComponent), Prop(FieldHintWrapperComponent, 'hint', hint)])
 export const Title = (title: string) => chain([Wrap(FieldTitleWrapperComponent), Prop(FieldTitleWrapperComponent, 'title', title)])
 // export const Placehodler = (placeholder: string) => Value('placeholder', placeholder);
-export const Half = Class('etsy-form-field-container-45')
-export const Third = Class('etsy-form-field-container-35')
-export const TwoThirds = Class('etsy-form-field-container-60')
-export const Quarter = Class('etsy-form-field-container-20')
+export const Half = Class('form-field-container-45')
+export const Third = Class('form-field-container-35')
+export const TwoThirds = Class('form-field-container-60')
+export const Quarter = Class('form-field-container-20')
 
 export const Hide = (factoryFunc: () => Observable<boolean>) => chain([Wrap(HideFieldWrapperComponent), PropFactory(HideFieldWrapperComponent, 'hide$', factoryFunc)])
 export const Warn = (factoryFunc: () => Observable<string>) => PropFactory(FieldLabelWrapperComponent, 'warning$', factoryFunc)
