@@ -42,6 +42,6 @@ export const Required = Validator(Validators.required);
 export const Row = Class('deco-group-row');
 export const Action = (action: string) => Prop(SubmitComponent, 'label', action);
 export const BtnClass = (cls: string) => Prop(SubmitComponent, 'btnClass', cls);
-export const Submit = (func: () => (() => void)) => Provide({provide: FORM_SUBMIT_TOKEN, useFactory: func});
+export const OnSubmit = (func: () => (() => void)) => Provide({provide: FORM_SUBMIT_TOKEN, useFactory: func});
 
 export const DropOptions = (fact: () => Observable<DataParentEntity[]>) => PropFactory(NestedDropdownComponent, 'options$', fact);
