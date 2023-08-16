@@ -26,3 +26,5 @@ export class SubmitComponent {
 
    }
 }
+
+export const Submit = SubmitComponent;
