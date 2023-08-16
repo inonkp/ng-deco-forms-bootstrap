@@ -1,16 +1,14 @@
-<div *ngIf="options$ | async as options" [ngClass]="{'dropend': config.level > 0, 
-    'toggle-align-end': config.level > 0}"  ngbDropdown #dropdown="ngbDropdown"
-    [popperOptions]="config.level == 0  ? stayOnBotton : moveToTheRight">
-    <button ngbDropdownItem type="button" class="btn btn-sm"
-    style="width: max-content; display: inline-block;"
-      >{{'kkkkkkk'}}</button>
-      <button *ngIf="options && options.length > 0" type="button"
-        ngbDropdownToggle class="btn btn-sm dropdown-toggle">
-      </button>
+<div *ngIf="options$ | async as options" ngbDropdown #dropdown="ngbDropdown" class="platy-dropdown">
+  <div class="platy-dropdown-item">
+    <button ngbDropdownItem
+      (click)="labelSubject.next(label)" class="item-label">{{label$ | async}}</button>
+    <div *ngIf="options.length > 0"
+      ngbDropdownToggle class="platy-dropdown-toggle">
+    </div>
+  </div>
     <div ngbDropdownMenu >
       <div *ngIf="dropdown.isOpen()">
-        <lib-nested-dropdown *ngFor="let opt of options"
-            [options]="opt.children" ></lib-nested-dropdown>
+        <lib-nested-dropdown *ngFor="let opt of options" class="nested"></lib-nested-dropdown>
       </div>
     </div>
   </div>

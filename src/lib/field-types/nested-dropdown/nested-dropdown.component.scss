@@ -1,0 +1,39 @@
+$nested-dropdown-padding: 16px;
+$toggle-arrow-width: 30px;
+
+:host(.nested) {
+    .platy-dropdown {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+.platy-dropdown {
+    
+    padding: $nested-dropdown-padding;
+    width: 25vh;
+    border-radius: 8px;
+    border: 1px solid #DBDBDB;
+    background: #FAFEFF;
+}
+
+.platy-dropdown-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.platy-dropdown-toggle::after {
+    content: '';
+    cursor: pointer;
+    rotate: 270deg;
+    height: 20px;
+    width: 30px;
+    background-position: center center;
+    background-size: cover;
+    margin-left: -19px;
+    margin-top: 4px;
+    position: absolute;
+    border: none;
+    background-image: url('/assets/dropdown-toggle.png');
+}

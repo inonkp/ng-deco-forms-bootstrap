@@ -1,6 +1,7 @@
 @import 'custom-classes';
 @import 'fields';
 @import 'wrappers';
+@import 'nested-dropdown';
 
 $first-field: ".deco-field.deco-field-first";
 $row-item: ".deco-field.deco-row-item";
@@ -39,6 +40,16 @@ $regular-inputs: number text;
     .change-tracking input[type=#{$input}].ng-dirty {
         background-color: $has-change-color !important;
     }
+}
+
+@each $input in $regular-inputs{
+  input[type=#{$input}] {
+      background-color: rgba(108, 153, 176, 0.1) !important;
+  }
+}
+
+textarea, select {
+  background-color: rgba(108, 153, 176, 0.1) !important;
 }
 
 .change-tracking textarea.ng-dirty {
