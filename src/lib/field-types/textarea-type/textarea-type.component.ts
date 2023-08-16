@@ -14,7 +14,7 @@ export type TextAreaConfig = {
 export class TextAreaTypeComponent {
  
   constructor(@Inject(FIELD_FORM_CONTROL_TOKEN) public control: FormControl,
-  @Optional() @Inject(FIELD_CONFIG_TOKEN) public config: TextAreaConfig = {rows: 4}) {
+  @Optional() @Inject(FIELD_CONFIG_TOKEN) public config: TextAreaConfig) {
 
   }
 }

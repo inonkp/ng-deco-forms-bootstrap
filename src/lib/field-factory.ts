@@ -12,9 +12,9 @@ import { NestedDropdownComponent, NestedSelectConfig } from './field-types/neste
 export const Number = (props?: NumberFieldConfig) => DecoField(NumberTypeComponent, props)
 export const Hidden = DecoField(HiddenComponent)
 export const Text = DecoField(TextTypeComponent)
-export const Textarea = (props?: TextAreaConfig) => DecoField(TextAreaTypeComponent, props);
+export const Textarea = (props: TextAreaConfig = {rows: 4}) => DecoField(TextAreaTypeComponent, props);
 export const Checkbox = DecoField(CheckboxTypeComponent);
 // export const Radio = fieldFactory('');
 
 export const Select = (props?: SelectConfig) => DecoField(SelectTypeComponent, props)
-export const Dropdown = (props?: NestedSelectConfig) => DecoField(NestedDropdownComponent, props)
+export const Dropdown = (props?: Partial<NestedSelectConfig>) => DecoField(NestedDropdownComponent, props)
