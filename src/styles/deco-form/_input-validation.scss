@@ -3,13 +3,13 @@
     @extend .is-invalid;
 }
 
-:not(:not(.ng-submitted .ng-invalid), .ng-submitted .platy-reset .ng-invalid){
+.ng-deco-submitted .ng-invalid{
     @extend .is-invalid;
 }
 
 
 
-lib-nested-dropdown:not(.nested) {
+.ng-deco-submitted lib-nested-dropdown:not(.nested) {
     
     .ng-invalid {
         border-color: #dc3545 !important;
