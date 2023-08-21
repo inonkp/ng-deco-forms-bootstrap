@@ -5,13 +5,22 @@ $toggle-arrow-width: 30px;
     .platy-dropdown {
         border-radius: 0;
         width: 100%;
+
+        .platy-dropdown-item, .dropdown-item {
+            :hover, :active, :focus {
+                background-color: unset !important;
+            }
+        }
+
     }
 }
 
+.pointer-events-none {
+    pointer-events: none;
+}
+
 .platy-dropdown {
-    
     padding: $nested-dropdown-padding;
-    width: 25vh;
     border-radius: 8px;
     border: 1px solid #DBDBDB;
     background: #FAFEFF;

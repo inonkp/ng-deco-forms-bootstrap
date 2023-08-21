@@ -1,9 +1,10 @@
-<div *ngIf="options$ | async as options" ngbDropdown #dropdown="ngbDropdown" class="platy-dropdown">
+<div *ngIf="options$ | async as options" ngbDropdown #dropdown="ngbDropdown" class="platy-dropdown"
+ [ngClass]="{'ng-invalid': control.invalid && !nested}">
   <div class="platy-dropdown-item">
-    <button ngbDropdownItem
-      (click)="labelSubject.next(label)" class="item-label">{{label$ | async}}</button>
+    <button ngbDropdownItem type="button" class="item-label" [ngClass]="{'pointer-events-none': !nested}"
+      (click)="onClick()">{{label$ | async}}</button>
     <div *ngIf="options.length > 0"
-      ngbDropdownToggle class="platy-dropdown-toggle">
+      ngbDropdownToggle class="platy-dropdown-toggle" [ngClass]="{'ng-invalid': control.invalid && !nested}">
     </div>
   </div>
     <div ngbDropdownMenu >

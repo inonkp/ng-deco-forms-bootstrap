@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { DestroyRef, InjectionToken, NgModule, inject } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DecoFormsLibModule } from 'ng-deco-forms';
@@ -20,8 +20,20 @@ import { FieldLabelWrapperComponent } from './wrappers/field-label-wrapper/field
 import { TooltipsComponent } from './wrappers/field-label-wrapper/tooltips/tooltips.component';
 import { HideFieldWrapperComponent } from './wrappers/hide-field-wrapper/hide-field-wrapper.component';
 import { NestedDropdownComponent } from './field-types/nested-dropdown/nested-dropdown.component';
+import { Subject } from 'rxjs';
 
+export const DESTORY_OBSERVABLE = new InjectionToken<Subject<void>>('destroy-observable');
+export const destroyObservableFactory = () => {
+    const destroyRef = inject(DestroyRef);
+    const destroyed = new Subject<void>();
 
+    destroyRef.onDestroy(() => {
+      destroyed.next();
+      destroyed.complete();
+    });
+
+    return destroyed.asObservable();
+}
 
 @NgModule({
   declarations: [
@@ -69,6 +81,9 @@ import { NestedDropdownComponent } from './field-types/nested-dropdown/nested-dr
     ErrorPipe,
     DecoFormsLibModule,
     NgbModule
+  ],
+  providers: [
+    { provide: DESTORY_OBSERVABLE, useFactory: destroyObservableFactory}
   ]
 })
 export class DecoFormsBootstrapModule { }
