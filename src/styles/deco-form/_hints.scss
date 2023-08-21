@@ -1,0 +1,8 @@
+@import '../mixins';
+
+.deco-field-hint {
+    &__text {
+      @include font-14-18-400();
+    }
+  }
+  

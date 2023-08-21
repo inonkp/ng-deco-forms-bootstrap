@@ -1,0 +1,15 @@
+@import '../mixins';
+
+.deco-field-title {
+  
+  
+    &__label {
+      @include font-18-27-bold();
+      opacity: 0.8;
+    }
+  
+    &__field {
+  
+    }
+  }
+  

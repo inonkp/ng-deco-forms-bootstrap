@@ -1,0 +1,21 @@
+
+.ng-dirty.ng-invalid {
+    @extend .is-invalid;
+}
+
+:not(:not(.ng-submitted .ng-invalid), .ng-submitted .platy-reset .ng-invalid){
+    @extend .is-invalid;
+}
+
+
+
+lib-nested-dropdown:not(.nested) {
+    
+    .ng-invalid {
+        border-color: #dc3545 !important;
+    }
+
+    .platy-dropdown-toggle.ng-invalid::after {
+        filter: hue-rotate(180deg) saturate(90)
+    }
+}

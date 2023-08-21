@@ -1,0 +1,12 @@
+$nested-dropdown-padding: 16px;
+
+lib-nested-dropdown .dropdown-menu {
+    padding: unset;
+    margin-top: -$nested-dropdown-padding - 4 !important;;
+    margin-left: $nested-dropdown-padding + 1 !important;
+}
+
+lib-nested-dropdown .dropdown-menu .dropdown-item {
+    background-color: unset !important;
+    color: unset !important;
+}

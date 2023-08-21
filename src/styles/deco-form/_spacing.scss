@@ -1,0 +1,11 @@
+deco-field {
+    @extend .d-block;
+}
+
+deco-field:not(:first-child) {
+    @extend .mt-3;
+}
+
+deco-field:not(:last-child) {
+    @extend .mb-3;
+}

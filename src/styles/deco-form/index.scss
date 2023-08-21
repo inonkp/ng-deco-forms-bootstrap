@@ -1,98 +1,12 @@
-@import 'custom-classes';
-@import 'fields';
-@import 'wrappers';
-@import 'nested-dropdown';
-
-$first-field: ".deco-field.deco-field-first";
-$row-item: ".deco-field.deco-row-item";
-$deco-group: ".deco-field.deco-field-group";
-$deco-first-in-group: ".deco-field > .deco-field";
-$has-change-color: rgb(255 235 0 / 30%);
-deco-field:has(>deco-hidden) {
-    @extend .d-none;
-}
-
-deco-field {
-    @extend .d-block;
-}
-
-deco-field:not(:first-child) {
-    @extend .mt-3;
-}
-
-deco-field:not(:last-child) {
-    @extend .mb-3;
-}
-
-deco-group.deco-group-row {
-    display: flex !important;
-    gap: 20px;
-
-    & > deco-field {
-        flex-basis: 100% !important;
-        flex: auto;
-        margin-top: unset !important;
-    }
-}
-$regular-inputs: number text;
-
-@each $input in $regular-inputs{
-    .change-tracking input[type=#{$input}].ng-dirty {
-        background-color: $has-change-color !important;
-    }
-}
-
-@each $input in $regular-inputs{
-  input[type=#{$input}] {
-      background-color: rgba(108, 153, 176, 0.1) !important;
-  }
-}
-
-textarea, select {
-  background-color: rgba(108, 153, 176, 0.1) !important;
-}
-
-.change-tracking textarea.ng-dirty {
-    background-color: $has-change-color !important;
-}
-
-.change-tracking select.ng-dirty {
-    background-color: $has-change-color !important;
-}
-
-.form-field-container-35 {
-    display: block;
-    width: 35%;
-  }
-  
-  .form-field-container-60 {
-    display: block;
-    width: 60%;
-  }
-  
-  .form-field-container-45 {
-    display: block;
-    width: 45%;
-  }
-  
-  .form-field-container-20 {
-    display: block;
-    width: 20%;
-  }
-  
-  .form-row-container {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    gap: 24px;
-    height: 38px;
-  }
-  
-  .form-row-container-75 {
-    @extend .form-row-container;
-    width: 75%;
-  }
-
-  .ng-dirty.ng-invalid {
-    @extend .is-invalid;
-  }
+@import 'form-control';
+@import 'titles';
+@import 'hints';
+@import 'labels';
+@import 'hidden';
+@import 'spacing';
+@import 'width';
+@import 'row';
+@import 'input-background';
+@import 'input-change-tracking';
+@import 'input-validation';
+@import 'dropdown';

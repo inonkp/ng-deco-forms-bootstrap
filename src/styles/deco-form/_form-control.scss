@@ -1,0 +1,15 @@
+@import '../mixins';
+@import '../colors';
+
+.deco-text, .deco-number, .deco-textarea {
+  @extend .form-control;
+}
+
+.deco-checkbox {
+  @extend .form-check-input;
+  cursor: pointer;
+}
+
+.deco-select {
+  @extend .form-select
+}

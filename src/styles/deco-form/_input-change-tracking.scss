@@ -1,0 +1,17 @@
+$has-change-color: rgb(255 235 0 / 30%);
+
+.change-tracking textarea.ng-dirty {
+    background-color: $has-change-color !important;
+}
+
+.change-tracking select.ng-dirty {
+    background-color: $has-change-color !important;
+}
+
+$regular-inputs: number text;
+
+@each $input in $regular-inputs{
+    .change-tracking input[type=#{$input}].ng-dirty {
+        background-color: $has-change-color !important;
+    }
+}

@@ -1,0 +1,10 @@
+deco-group.deco-group-row {
+    display: flex !important;
+    gap: 20px;
+
+    & > deco-field {
+        flex-basis: 100% !important;
+        flex: auto;
+        margin-top: unset !important;
+    }
+}
